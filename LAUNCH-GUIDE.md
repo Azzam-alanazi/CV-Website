@@ -4,7 +4,7 @@
 1. Go to https://github.com
 2. Click **Sign up**
 3. Enter your email, create a password, and choose a username
-   - Tip: Use something professional like `azzam-alanazi` or `azzamalx`
+   - Tip: Use something professional like `UserName`
 4. Verify your email
 
 ---
@@ -12,7 +12,7 @@
 ## Step 2 — Create a New Repository
 1. Once logged in, click the **+** icon (top right) → **New repository**
 2. Name it exactly: `your-username.github.io`
-   - Example: if your username is `azzamalx`, name it `azzamalx.github.io`
+   - Example: if your username is `UserName`, name it `UserName.github.io`
 3. Set it to **Public**
 4. Leave everything else as default
 5. Click **Create repository**
@@ -28,7 +28,8 @@
    - `education.html`
    - `style.css`
    - `main.js`
-   - `photo.jpg` (when you have it)
+   - `photo.jpg`
+   - `etc...` (when you have it)
 3. Scroll down, add a commit message like `"Launch my CV website"`
 4. Click **Commit changes**
 
