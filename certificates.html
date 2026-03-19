@@ -35,6 +35,7 @@
     </section>
 
     <section class="section">
+
       <div class="cert-counter-wrap">
         <div class="cert-counter">
           <span class="counter-num" data-target="2">0</span>
@@ -50,55 +51,55 @@
         </div>
       </div>
 
-      <div class="cert-grid">
+      <div class="cert-showcase">
 
         <!-- HTML Essentials -->
-        <div class="cert-card">
-          <div class="cert-card-top">
-            <div class="cert-logo">
-              <i class="fas fa-code"></i>
+        <div class="cert-showcase-item">
+          <div class="cert-showcase-meta">
+            <div class="cert-showcase-left">
+              <div class="cert-icon-badge"><i class="fas fa-code"></i></div>
+              <div>
+                <h3>HTML Essentials</h3>
+                <p class="cert-issuer"><i class="fas fa-building"></i> College of Computing &amp; IT — Shaqra University</p>
+                <p class="cert-sub-issuer"><i class="fas fa-network-wired"></i> via Cisco Networking Academy</p>
+              </div>
             </div>
-            <div class="cert-badge-wrap">
-              <span class="cert-badge">Cisco</span>
+            <div class="cert-showcase-right">
+              <span class="cert-status cert-status--done"><i class="fas fa-circle-check"></i> Completed</span>
+              <span class="cert-date"><i class="fas fa-calendar"></i> 15 Mar 2026</span>
+              <div class="cert-tags">
+                <span>HTML</span><span>Web Dev</span><span>Frontend</span>
+              </div>
             </div>
           </div>
-          <div class="cert-card-body">
-            <h3>HTML Essentials</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> College of Computing & IT — Shaqra University</p>
-            <p class="cert-sub-issuer"><i class="fas fa-info-circle"></i> via Cisco Networking Academy &nbsp;·&nbsp; Instructor: Nayyar Ahmed Khan</p>
-            <p class="cert-desc">Covers the fundamentals of HTML — semantic structure, forms, links, media, and the core foundations of web development.</p>
-            <div class="cert-tags">
-              <span>HTML</span><span>Web Dev</span><span>Frontend</span>
-            </div>
-          </div>
-          <div class="cert-card-footer">
-            <span class="cert-status cert-status--done"><i class="fas fa-circle-check"></i> Completed</span>
-            <span class="cert-date"><i class="fas fa-calendar"></i> 15 Mar 2026</span>
+          <div class="cert-img-wrap">
+            <img src="cert-html.png" alt="HTML Essentials Certificate — Azzam Alanazi" loading="lazy"/>
+            <a href="cert-html.png" target="_blank" class="cert-zoom-btn"><i class="fas fa-expand"></i> View Full Size</a>
           </div>
         </div>
 
         <!-- Python Essentials -->
-        <div class="cert-card">
-          <div class="cert-card-top">
-            <div class="cert-logo">
-              <i class="fab fa-python"></i>
+        <div class="cert-showcase-item">
+          <div class="cert-showcase-meta">
+            <div class="cert-showcase-left">
+              <div class="cert-icon-badge"><i class="fab fa-python"></i></div>
+              <div>
+                <h3>Python Essentials 1</h3>
+                <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                <p class="cert-sub-issuer"><i class="fas fa-user-tie"></i> Director: Lynn Bloomer</p>
+              </div>
             </div>
-            <div class="cert-badge-wrap">
-              <span class="cert-badge">Cisco</span>
+            <div class="cert-showcase-right">
+              <span class="cert-status cert-status--done"><i class="fas fa-circle-check"></i> Completed</span>
+              <span class="cert-date"><i class="fas fa-calendar"></i> 02 Dec 2024</span>
+              <div class="cert-tags">
+                <span>Python</span><span>Programming</span><span>Automation</span>
+              </div>
             </div>
           </div>
-          <div class="cert-card-body">
-            <h3>Python Essentials 1</h3>
-            <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
-            <p class="cert-sub-issuer"><i class="fas fa-info-circle"></i> Director: Lynn Bloomer</p>
-            <p class="cert-desc">Covers core Python programming — syntax, data types, loops, functions, and the foundational logic of software development.</p>
-            <div class="cert-tags">
-              <span>Python</span><span>Programming</span><span>Automation</span>
-            </div>
-          </div>
-          <div class="cert-card-footer">
-            <span class="cert-status cert-status--done"><i class="fas fa-circle-check"></i> Completed</span>
-            <span class="cert-date"><i class="fas fa-calendar"></i> 02 Dec 2024</span>
+          <div class="cert-img-wrap">
+            <img src="cert-python.png" alt="Python Essentials 1 Certificate — Azzam Alanazi" loading="lazy"/>
+            <a href="cert-python.png" target="_blank" class="cert-zoom-btn"><i class="fas fa-expand"></i> View Full Size</a>
           </div>
         </div>
 
@@ -110,7 +111,26 @@
       </div>
 
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+      <img id="lightbox-img" src="" alt=""/>
+      <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('active')"><i class="fas fa-xmark"></i></button>
+    </div>
+
   </main>
+
   <script src="main.js"></script>
+  <script>
+    // Lightbox for cert images
+    document.querySelectorAll('.cert-img-wrap img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        const lb = document.getElementById('lightbox');
+        document.getElementById('lightbox-img').src = img.src;
+        lb.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
