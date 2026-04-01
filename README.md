@@ -1,5 +1,7 @@
 # 🚀 How to Launch Your CV Website on GitHub Pages (Free)
-
+---
+[Live preview](https://azzam-alanazi.github.io/CV-Website/)
+---
 ## Step 1 — Create a GitHub Account
 1. Go to https://github.com
 2. Click **Sign up**
